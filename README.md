@@ -1,8 +1,8 @@
 # File_Driver
 
 **Overview**
-- **Purpose**: A simple file-transfer test pipeline that writes NumPy scan files locally, sends them over TCP to a receiver, and saves received files for later processing or validation.
-- **Use case**: Local testing or sending scan files from a host to a remote receiver (e.g., a Raspberry Pi).
+- **Purpose**: A simple file-transfer test pipeline that writes NumPy scan files locally, sends them over TCP to a receiver, and saves received files for later processing or validation
+- **Use case**: Local testing or sending scan files from a host to a remote receiver (Raspberry Pi)
 
 **Components**
 - `dummy_writer.py`: Generates synthetic NumPy scan files into `./scans` for testing.
@@ -15,17 +15,6 @@
 - **Payload**: Raw bytes of the `.npy` file.
 
 This simple protocol allows the receiver to know how many bytes to read for each incoming file.
-
-**Prerequisites**
-- **Python**: Python 3.8+ (the repo was developed and tested with Python 3.13 on the author machine).
-- **Packages**: `numpy` (used by `dummy_writer.py` and `verify_transfer.py`).
-
-**Quick Setup (Windows PowerShell)**
-1. Confirm a working Python interpreter. If `python` isn't available, locate the installed interpreter with a full path (example shown below was valid on the developer machine):
-
-```powershell
-C:\Users\izzyb\AppData\Local\Programs\Python\Python313\python.exe --version
-```
 
 2. Recommended: create and activate a virtual environment from the project root:
 
