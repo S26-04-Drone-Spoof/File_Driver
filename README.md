@@ -106,7 +106,3 @@ python .\verify_transfer.py a.npy b.npy  # compare two specific files
 - `sender.py` — file watcher + TCP sender
 - `receiver.py` — TCP server that saves incoming files
 - `verify_transfer.py` — helper to compare source vs received files
-
-If you want, I can: (A) modify the sender/receiver to preserve filenames, (B) switch the sender to stream files to avoid large RAM use, or (C) add logging and a small CLI for configuration. Tell me which you'd prefer.
-# File_Driver
-# File_Driver
