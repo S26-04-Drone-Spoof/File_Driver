@@ -1,0 +1,16 @@
+[Unit]
+Description=Receiver Service
+After=network.target
+
+[Service]
+# Set the user who will run the script
+User=
+# Set the working directory where receiver_pi.py is located
+WorkingDirectory=
+# Use the full path to the Python interpreter and your script
+ExecStart=/usr/bin/python3 receiver_pi.py
+# Restarts the script automatically if it fails
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

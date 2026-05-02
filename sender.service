@@ -1,0 +1,16 @@
+[Unit]
+Description=Sender Service
+After=network.target
+
+[Service]
+# Set the user who will run the script (e.g., your username or root)
+User=
+# Set the working directory where sender_pi.py is located
+WorkingDirectory=
+# Use the full path to the Python interpreter and your script
+ExecStart=/usr/bin/python3 sender_pi.py
+# Restarts the script automatically if it fails
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
