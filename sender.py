@@ -66,7 +66,7 @@ sent_files = set()
 # Main loop: poll the source folder for new .npy files, and send any that
 # haven't been sent yet. The sleep at the end keeps CPU usage reasonable.
 while True:
-    files = sorted([f for f in os.listdir(SOURCE_FOLDER) if f.endswith(".npy")])
+    files = sorted([f for f in os.listdir(SOURCE_FOLDER) if f.endswith(".npz")])
     for file in files:
         full_path = os.path.join(SOURCE_FOLDER, file)
         if full_path not in sent_files:

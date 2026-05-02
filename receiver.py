@@ -42,7 +42,7 @@ def handle_client(conn):
                 break
             data += packet
 
-        filename = f"scan_{int(time.time()*1000)}.npy"
+        filename = f"scan_{int(time.time()*1000)}.npz"
         path = os.path.join(INCOMING, filename)
 
         with open(path, "wb") as f:
