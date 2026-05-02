@@ -22,7 +22,7 @@ scan_id = 0
 # successfully saving so other processes (like `sender.py`) can detect it.
 while True:
     data = np.random.rand(10000, 6).astype(np.float32)
-    filename = os.path.join(OUTPUT_DIR, f"scan_{scan_id}.npy")
+    filename = os.path.join(OUTPUT_DIR, f"scan_{scan_id}.npz")
     np.save(filename, data)
     print(f"Wrote {filename}")
     scan_id += 1

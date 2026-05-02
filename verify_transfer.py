@@ -10,7 +10,7 @@ validate transfers performed by ``sender.py`` and ``receiver.py``.
 
 Usage:
     python verify_transfer.py             # compare latest from scans vs latest from incoming
-    python verify_transfer.py a.npy b.npy # compare two specific files
+    python verify_transfer.py a.npz b.npz # compare two specific files
 """
 import sys
 import os
@@ -26,7 +26,7 @@ except Exception as e:
 
 def latest_file(folder):
     p = Path(folder)
-    files = sorted(p.glob("*.npy"), key=lambda x: x.stat().st_mtime, reverse=True)
+    files = sorted(p.glob("*.npz"), key=lambda x: x.stat().st_mtime, reverse=True)
     return files[0] if files else None
 
 
@@ -77,7 +77,7 @@ def main(argv):
         a = latest_file("./scans")
         b = latest_file("./data/incoming")
         if not a or not b:
-            print("Could not find files to compare. Ensure ./scans and ./data/incoming contain .npy files.")
+            print("Could not find files to compare. Ensure ./scans and ./data/incoming contain .npz files.")
             return 3
         a_path, b_path = str(a), str(b)
 
