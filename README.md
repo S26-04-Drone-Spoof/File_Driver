@@ -85,8 +85,11 @@ python .\verify_transfer.py a.npz b.npz  # compare two specific files
 **Raspberry Pi HIL Configuration/Setup**
 
 *Definitions:*
+
 Simulation Machine: Machine generating simulated LiDAR data to be sent to the ML Machine
+
 Raspberry Pi: Raspberry Pi SBC in the loop intercepting receive requests from Simulation Machine and retransmitting data to ML Machine
+
 ML Machine: End device that receives simulated LiDAR data
 
 *Setup:*
